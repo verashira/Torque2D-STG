@@ -12,7 +12,8 @@ function createAsteroids(%Number_of_Asteroids)
     %asteroid.Position = "-40" SPC getRandom(-35,35);
 
     // Set the size.        
-    %asteroid.Size = "3 3";
+    //%asteroid.Size = "3 3";
+	%asteroid.Size = getRandom(3, 10);
     
     // Set to the frontmost layer.
     %asteroid.SceneLayer = 1;
