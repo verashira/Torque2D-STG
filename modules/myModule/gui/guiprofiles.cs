@@ -1,2 +1,2 @@
 if(!isObject(GuiDefaultProfile)) 
-	new GuiControlProfile (GuiDefaultProfile);
+	new GuiControlProfile (GuiDefaultProfile) { Modal = true; };

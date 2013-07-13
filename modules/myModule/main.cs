@@ -8,6 +8,8 @@ function MyModule::create( %this )
 	exec("./scripts/spaceship.cs");
 	exec("./scripts/asteroids.cs");
 	
+	exec("./scripts/controls.cs");
+	
 	createSceneWindow();
 	createScene();
 	
@@ -21,9 +23,13 @@ function MyModule::create( %this )
 	createBackground();
 	createSpaceShip();
 	createAsteroids(20);
+	
+	new ScriptObject(InputManager);
+	mySceneWindow.addInputListener(InputManager);
 }
 
 function MyModule::destroy( %this )
 {
+	InputManager.delete();
 	destroySceneWindow();
 }
