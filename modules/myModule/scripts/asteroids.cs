@@ -12,14 +12,14 @@ function createAsteroids(%Number_of_Asteroids)
     %asteroid.Position = "-40" SPC getRandom(-35,35);
 
     // Set the size.        
-    //%asteroid.Size = "3 3";
-	%asteroid.Size = getRandom(3, 10);
+    %randomsize = getRandom(3, 10);
+	%asteroid.Size = %randomsize;
     
     // Set to the frontmost layer.
     %asteroid.SceneLayer = 1;
 
-    //Sets the collision shape to a circle with a radius of 1.5 units
-    %asteroid.createCircleCollisionShape(1.5);
+    //Sets the collision shape to a circle with a radius of its radius
+    %asteroid.createCircleCollisionShape(%randomsize * 0.85 * 0.5);
 
     //This function determines how bouncy our asteroids will be if collisions occur
     //values between 0.0 and 1.0 should be used in most situations
